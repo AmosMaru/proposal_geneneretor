@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Expose port 5000 to the outside world
+# Expose port 5553 to the outside world
 EXPOSE 5553
 
-# Command to run the Flask application
-CMD ["python", "app.py"]
+# Load environment variables from .env file
+CMD ["python", "-m", "dotenv", "-f", ".env", "python", "app.py"]
