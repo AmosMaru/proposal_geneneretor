@@ -16,5 +16,5 @@ COPY . .
 # Expose port 5553 to the outside world
 EXPOSE 5553
 
-# Load environment variables from .env file
-CMD ["python", "-m", "dotenv", "-f", ".env", "python", "app.py"]
+# Command to run the Flask application
+CMD ["python", "app.py"]
